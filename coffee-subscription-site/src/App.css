@@ -1,0 +1,40 @@
+:root {
+    --neutral-900: #343e4c;
+    --neutral-500: #848990;
+    --neutral-200: #E1DDDA;
+    --neutral-100: #F4F1EB;
+    --neutral-50: #FEFCF6;
+    --neutral-0: #FFFFFF;
+    --teal-600: #0E8684;
+    --teal-300: #66D2CF;
+    --orange-200: #FDD6BA;
+}
+
+.button {
+    border: none;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: var(--neutral-0);
+}
+
+.primary {
+    background-color: var(--teal-600);
+}
+
+.primary:hover {
+    background-color: var(--teal-300);
+    cursor: pointer;
+}
+
+.primary:focus {
+    background-color: var(--teal-600);
+    outline: 2px solid var(--teal-600);
+    outline-offset: 3px;
+}
+
+.disabled {
+    background-color: var(--neutral-200);
+    color: var(--neutral-500);
+    cursor: not-allowed;
+}
