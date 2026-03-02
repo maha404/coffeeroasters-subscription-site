@@ -38,3 +38,50 @@
     color: var(--neutral-500);
     cursor: not-allowed;
 }
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hamburger {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+    font-size: 24px;
+    text-align: center;
+    padding: 0;
+
+    ul > li
+    {
+        list-style-type: none;
+        
+    }
+}
+
+.nav-closed {
+    display: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--neutral-900);
+}

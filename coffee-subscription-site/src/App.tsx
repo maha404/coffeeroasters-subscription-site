@@ -1,13 +1,12 @@
 import './App.css'
 import Button from '../Components/Button';
+import NavBar from '../Components/NavBar';
 
 function App() {
 
   return (
     <>
-     <Button text="Create your plan" onClick={() => alert("Subscribed!")} disabled={false} />
-    
-     <Button text="Create your plan" onClick={() => alert("Subscribed!")} disabled={true} />
+      <NavBar />
     </>
   )
 }
