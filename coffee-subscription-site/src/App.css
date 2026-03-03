@@ -10,6 +10,21 @@
     --orange-200: #FDD6BA;
 }
 
+body {
+    font-family: 'Barlow', sans-serif;
+    margin: 24px 16px;
+
+    @media screen and (min-width: 768px) {
+        margin: 32px 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: 40px 80px;
+    }
+
+
+}
+
 .button {
     border: none;
     padding: 16px 32px;
@@ -84,4 +99,53 @@
 a:link {
     text-decoration: none;
     color: var(--neutral-900);
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+}
+
+.navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    gap: 24px;
+    padding: 40px 20px;
+    background-color: var(--neutral-900);
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.footer-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+    color: var(--neutral-500);
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+    height: 20px;
 }
