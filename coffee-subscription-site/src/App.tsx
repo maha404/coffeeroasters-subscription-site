@@ -1,14 +1,12 @@
 import './App.css'
-import Button from './Components/Button';
-import NavigationMobile from './Components/NavigationMobile';
-import Navigation from './Components/Navigation';
+import Header from './Components/Header';
 import Footer from './Components/Footer';
 
 function App() {
 
   return (
     <>
-      <NavigationMobile />
+      <Header />
       {/* <Navigation /> */}
       <Footer />
     </>

@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: "Fraunces", serif;
     margin: 24px 16px;
 
     @media screen and (min-width: 768px) {
@@ -148,4 +148,63 @@ footer {
     display: flex;
     gap: 20px;
     height: 20px;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header-section {
+ 
+  text-align: center;
+  color: white;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.header-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #0e8784; /* Match the button color */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #1a9a96; /* Slightly lighter shade for hover */
 }
