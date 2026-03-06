@@ -273,3 +273,59 @@ header {
     }
  
 }
+
+/*benefits section*/
+
+.benefit-card-section {
+    position: relative;
+    top: -190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.card {
+    height: 425px;
+    background-color: var(--neutral-900);
+    padding: 50px 24px 0px 24px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--neutral-0);
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+}
+
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    background-color: var(--teal-600);
+    color: var(--neutral-0);
+    border-radius: 8px;
+    padding: 24px 20px;
+    width: 280px;
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        text-align: left;
+    }
+}
