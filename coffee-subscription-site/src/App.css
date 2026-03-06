@@ -181,6 +181,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   width: 80%;
   top: 40%;
@@ -221,4 +222,54 @@ header {
 
 .cta-button:hover {
   background-color: #1a9a96; /* Slightly lighter shade for hover */
+}
+
+
+/* Collection Section */
+
+.collection-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.collection-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+.transparent-gradient {
+   display: block;
+    position: relative;
+    bottom: 5.5rem;
+    left: 0px;
+    width: 100%;
+    height: 13.0208333333vw;
+    background: linear-gradient(180deg, transparent 0, #FEFCF7 100%);
+}
+
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        text-align: left;
+    }
+ 
 }
