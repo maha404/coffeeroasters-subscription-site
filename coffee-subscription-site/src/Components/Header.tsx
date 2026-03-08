@@ -2,8 +2,8 @@
 import mobileHero from '../assets/home/mobile/image-hero-coffeepress.jpg'
 import tabletHero from '../assets/home/tablet/image-hero-coffeepress.jpg'
 import desktopHero from '../assets/home/desktop/image-hero-coffeepress.jpg'
-import NavigationMobile from './NavigationMobile'
-import Navigation from './Navigation'
+import NavigationMobile from './Navigation/NavigationMobile'
+import Navigation from './Navigation/Navigation'
 import Button from './Button' 
 
 export default function Header() {

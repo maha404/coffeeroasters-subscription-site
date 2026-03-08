@@ -1,5 +1,5 @@
 import BenefitCardSection from "./BenefitCardSection"
-import Card from "./Card"
+import Card from "../Card"
 
 export default function BenefitSection() {
     return (

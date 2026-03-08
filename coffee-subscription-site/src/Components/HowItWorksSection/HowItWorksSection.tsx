@@ -1,5 +1,5 @@
-import StepCard from "./StepCard";
-import Button from "./Button";
+import StepCard from "../StepCard";
+import Button from "../Button";
 
 export default function HowItWorksSection() {
     return (
