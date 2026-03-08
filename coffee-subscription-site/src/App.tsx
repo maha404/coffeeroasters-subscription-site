@@ -10,7 +10,6 @@ function App() {
   return (
     <div className='main-container'>
       <Header />
-      {/* <Navigation /> */}
       <CollectionSection  />
       <BenefitSection />
       <HowItWorksSection />

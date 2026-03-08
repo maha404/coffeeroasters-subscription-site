@@ -3,17 +3,18 @@ import mobileHero from '../assets/home/mobile/image-hero-coffeepress.jpg'
 import tabletHero from '../assets/home/tablet/image-hero-coffeepress.jpg'
 import desktopHero from '../assets/home/desktop/image-hero-coffeepress.jpg'
 import NavigationMobile from './NavigationMobile'
-import Button from './Button'
+import Navigation from './Navigation'
+import Button from './Button' 
 
 export default function Header() {
     return (
         <header>
-            <NavigationMobile />
+            <Navigation />
             <section className="header-section">
             <picture>
+                <source media="(min-width: 1024px)" srcSet={desktopHero} />
                 <source media="(min-width: 768px)" srcSet={tabletHero} />
-                <source media="(min-width: 1440px)" srcSet={desktopHero} />
-                <img src={mobileHero} alt="" />
+                <img src={mobileHero} alt="Coffee being pressed in a French press" />
             </picture>
             <div className="header-content">
                 <h1>Great coffee made simple.</h1>
