@@ -1,9 +1,9 @@
 import CollectionSectionCard from "./CollecionSectionCard"
 import CollectionHeader from "./CollectionHeader"
-import grandEspresso from '../assets/home/desktop/image-gran-espresso.png'
-import planalto from '../assets/home/desktop/image-planalto.png'
-import piccollo from '../assets/home/desktop/image-piccollo.png'
-import danche from '../assets/home/desktop/image-danche.png'
+import grandEspresso from "../../assets/home/desktop/image-gran-espresso.png"
+import planalto from "../../assets/home/desktop/image-planalto.png"
+import piccollo from "../../assets/home/desktop/image-piccollo.png"
+import danche from "../../assets/home/desktop/image-danche.png"
 
 export default function CollectionSection() {
     return (

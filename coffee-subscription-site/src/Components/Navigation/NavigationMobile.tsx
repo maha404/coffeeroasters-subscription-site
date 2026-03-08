@@ -1,14 +1,9 @@
 import { useState } from "react";
-import logo from "../assets/shared/desktop/logo.svg";
-import hamburgerIcon from "../assets/shared/mobile/icon-hamburger.svg";
-import closeIcon from "../assets/shared/mobile/icon-close.svg";
+import logo from "../../assets/shared/desktop/logo.svg";
+import hamburgerIcon from "../../assets/shared/mobile/icon-hamburger.svg";
+import closeIcon from "../../assets/shared/mobile/icon-close.svg";
 
-interface Props {
-    open?: boolean;
-    onClick?: () => void;
-}
-
-export default function NavigationMobile(props: Props) {
+export default function NavigationMobile() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {

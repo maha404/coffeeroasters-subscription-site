@@ -1,7 +1,7 @@
 import BenefitCard from "./BenefitCard";
-import bestQuality from '../assets/home/desktop/icon-coffee-bean.svg';
-import exclusiveBenefits from '../assets/home/desktop/icon-gift.svg';
-import freeShipping from '../assets/home/desktop/icon-truck.svg';
+import bestQuality from "../../assets/home/desktop/icon-coffee-bean.svg";
+import exclusiveBenefits from "../../assets/home/desktop/icon-gift.svg";
+import freeShipping from "../../assets/home/desktop/icon-truck.svg";
 
 
 

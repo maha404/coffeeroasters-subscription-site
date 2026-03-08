@@ -1,9 +1,11 @@
 
+import logo from "../../assets/shared/desktop/logo.svg";
+
 export default function Navigation() {
     return (
         <nav className="navbar-desktop">
             <div>
-                <img src="../src/assets/shared/desktop/logo.svg" alt="Logo" className="logo" />
+                <img src={logo} alt="Logo" className="logo" />
             </div>
             <ul className="menu-items">
                 <li><a href="#">Home</a></li>
