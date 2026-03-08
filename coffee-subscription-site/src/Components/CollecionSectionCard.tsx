@@ -9,8 +9,10 @@ export default function CollectionSection(props: props) {
     return (
             <section className="collection-card">
                 <img src={props.img} alt="" />
-                <h3>{props.title}</h3>
-                <p>{props.description}</p>
+                <div>
+                     <h3>{props.title}</h3>
+                    <p>{props.description}</p>
+                </div>
             </section>
     )
 }
