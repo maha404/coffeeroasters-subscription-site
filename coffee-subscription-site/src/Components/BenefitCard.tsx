@@ -10,8 +10,10 @@ export default function BenefitCard(props: props) {
     return (
         <section className="benefit-card">
             <img src={props.img} alt="" />
-            <h3>{props.title}</h3>
-            <p>{props.description}</p>
+            <div>
+                 <h3>{props.title}</h3>
+                <p>{props.description}</p>
+            </div>
         </section>
     )
 }
