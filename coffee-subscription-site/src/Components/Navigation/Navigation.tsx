@@ -1,5 +1,5 @@
-
 import logo from "../../assets/shared/desktop/logo.svg";
+import { Link } from "react-router";
 
 export default function Navigation() {
     return (
@@ -8,9 +8,9 @@ export default function Navigation() {
                 <img src={logo} alt="Logo" className="logo" />
             </div>
             <ul className="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Create your plan</a></li>
+                <li><Link to="/">Homepage</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/subscribe">Create your plan</Link></li>
             </ul>
         </nav>
     );
