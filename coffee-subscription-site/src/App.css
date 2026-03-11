@@ -578,3 +578,37 @@ header {
         font-weight: bold;
     }
 }
+
+
+/* About */
+
+.our-commitment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h2 {
+        font-size: 28px;
+        margin: 0;
+        color: var(--neutral-900);
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--neutral-900);
+    }
+}
