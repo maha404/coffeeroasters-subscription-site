@@ -3,6 +3,7 @@ import desktopHero from '../assets/about/desktop/image-hero-whitecup.jpg'
 import tabletHero from '../assets/about/tablet/image-hero-whitecup.jpg'
 import mobileHero from '../assets/about/mobile/image-hero-whitecup.jpg'
 import OurCommitment from '../Components/OurCommitmentSection/OurCommitment';
+import QualityCard from '../Components/QualityCard';
 
 export default function AboutPage() {
     return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
             buttonVisible={false} 
             />
             <OurCommitment />
+            <QualityCard />
         </>
     )
 }

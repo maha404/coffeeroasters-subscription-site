@@ -637,3 +637,57 @@ header {
             }
         }
 }
+
+
+/* Quality card */
+
+.quality-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    img {
+        width: 280px;
+        z-index: 1;
+        position: relative;
+        border-radius: 10px;
+    }
+
+        @media screen and (min-width: 768px) {
+            img {
+                width: 573px;
+                height: 300px;
+            }
+        }
+    
+        @media screen and (min-width: 1024px) {
+            flex-direction: row-reverse; 
+        }
+
+}
+
+.quality-card-text {
+    background-color: var(--neutral-900);
+    padding: 112px 20px 40px 20px;
+    margin-top: -120px;
+    color: var(--neutral-0);
+    text-align: center;
+    border-radius: 10px;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+        padding: 112px 80px;
+        width: 50%;
+
+        img {
+            width: 445px;
+            height: 474px;
+        }
+    }
+
+}
