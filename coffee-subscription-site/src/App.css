@@ -593,6 +593,20 @@ header {
         width: 100%;
         border-radius: 10px;
     }
+
+
+     @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+        @media screen and (min-width: 1024px) {
+            gap: 125px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
 }
 
 .text-container {
@@ -611,4 +625,15 @@ header {
         line-height: 1.5;
         color: var(--neutral-900);
     }
+
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            text-align: left;
+        }
+    
+        @media screen and (min-width: 1024px) {
+            h2 {
+                font-size: 48px;
+            }
+        }
 }
