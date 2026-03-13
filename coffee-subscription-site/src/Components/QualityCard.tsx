@@ -5,7 +5,7 @@ import imageMobile from '../assets/about/mobile/image-quality.jpg';
 export default function QualityCard() {
     return (
         <section className="quality-card">
-           <picture>
+           <picture className="quality-card-image">
                 <source media="(min-width: 1024px)" srcSet={imageDesktop} />
                 <source media="(min-width: 768px)" srcSet={imageTablet} />
                 <img src={imageMobile} alt="Coffee being pressed in a French press" />
