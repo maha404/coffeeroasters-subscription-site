@@ -4,6 +4,7 @@ import tabletHero from '../assets/about/tablet/image-hero-whitecup.jpg'
 import mobileHero from '../assets/about/mobile/image-hero-whitecup.jpg'
 import OurCommitment from '../Components/OurCommitmentSection/OurCommitment';
 import QualityCard from '../Components/QualityCard';
+import HeadquartersSection from '../Components/HeadquartersSection';
 
 export default function AboutPage() {
     return (
@@ -18,6 +19,7 @@ export default function AboutPage() {
             />
             <OurCommitment />
             <QualityCard />
+            <HeadquartersSection />
         </>
     )
 }

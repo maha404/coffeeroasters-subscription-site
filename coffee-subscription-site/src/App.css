@@ -733,3 +733,36 @@ header {
     }
 
 }
+
+
+/* Headquarters section */
+
+.headquarters-section {
+   
+    @media screen and (min-width: 1024px) {
+        width: 1045px;
+        margin: 0 auto;
+    }
+}
+
+.headquarters-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      
+    }
+
+    @media screen and (min-width: 1024px) {
+        gap: 96px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+}
