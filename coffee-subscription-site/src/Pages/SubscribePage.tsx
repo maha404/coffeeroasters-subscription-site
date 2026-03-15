@@ -3,6 +3,7 @@ import desktopHero from '../assets/plan/desktop/image-hero-blackcup.jpg'
 import tabletHero from '../assets/plan/tablet/image-hero-blackcup.jpg'
 import mobileHero from '../assets/plan/mobile/image-hero-blackcup.jpg'
 import HowItWorksSection from "../Components/HowItWorksSection/HowItWorksSection"
+import PreferencesList from '../Components/preferencesList';
 
 export default function SubscribePage() {
     return (
@@ -16,6 +17,7 @@ export default function SubscribePage() {
                 imageMobile={mobileHero}
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
+            <PreferencesList />
         </div>
     )
 }

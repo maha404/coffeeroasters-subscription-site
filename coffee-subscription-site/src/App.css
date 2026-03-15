@@ -768,4 +768,17 @@ header {
 }
 
 /* Create plan */
+.preferences-list-item {
+    display: flex;
+    gap: 24px;
+    color: var(--neutral-500);  
+}
 
+.preferences-number .active {
+    color: var(--neutral-900);
+}
+
+.preferences-text .active {
+    color: var(--neutral-900);
+    font-weight: bold;
+}
