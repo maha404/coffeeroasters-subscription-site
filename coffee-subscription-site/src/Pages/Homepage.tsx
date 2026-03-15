@@ -19,7 +19,7 @@ export default function Homepage() {
             />
             <CollectionSection />
             <BenefitSection />
-            <HowItWorksSection />
+            <HowItWorksSection  buttonVisible={true} headerVisible={true} />
         
         </>
     );
