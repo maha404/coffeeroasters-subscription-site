@@ -771,14 +771,21 @@ header {
 .preferences-list-item {
     display: flex;
     gap: 24px;
+    font-size: 24px;
     color: var(--neutral-500);  
+
+    .preferences-number, .preferences-text {
+        font-weight: bold;
+    }
+
 }
 
-.preferences-number .active {
-    color: var(--neutral-900);
+.preferences-number.active {
+    color: var(--teal-300);
+    font-weight: bold;
 }
 
-.preferences-text .active {
+.preferences-text.active {
     color: var(--neutral-900);
     font-weight: bold;
 }
