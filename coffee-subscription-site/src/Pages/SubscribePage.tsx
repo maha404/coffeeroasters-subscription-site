@@ -3,9 +3,15 @@ import desktopHero from '../assets/plan/desktop/image-hero-blackcup.jpg'
 import tabletHero from '../assets/plan/tablet/image-hero-blackcup.jpg'
 import mobileHero from '../assets/plan/mobile/image-hero-blackcup.jpg'
 import HowItWorksSection from "../Components/HowItWorksSection/HowItWorksSection"
-import PreferencesList from '../Components/preferencesList';
+import PreferencesList from '../Components/PreferencesList'
+import QuestionToggle from "../Components/QuestionToggle"
 
 export default function SubscribePage() {
+
+    const handleToggle = () => {
+        console.log('toggle')
+    }
+
     return (
         <div>
             <Header
@@ -18,6 +24,7 @@ export default function SubscribePage() {
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
             <PreferencesList />
+            <QuestionToggle title="How do you drink your coffee?" panelId="1" buttonId="1" onToggle={handleToggle}/>
         </div>
     )
 }
