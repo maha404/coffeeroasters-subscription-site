@@ -1,15 +1,19 @@
 interface Props {
     active?: boolean
     text: string
+    option: string
     panelId: string
     labelledBy: string
+    onClick?: () => void
 }
 
 export default function QuestionCard({
     active = false,
     text,
+    option,
     panelId,
-    labelledBy
+    labelledBy, 
+    onClick
 }: Props) {
     return (
         <div
@@ -17,7 +21,9 @@ export default function QuestionCard({
             role="region"
             aria-labelledby={labelledBy}
             className={`question-card ${active ? 'active' : ''}`}
+            onClick={onClick}
         >
+            <h3>{option}</h3>
             <p>{text}</p>
         </div>
     )

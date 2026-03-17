@@ -1,4 +1,5 @@
-import { Children } from "react"
+import type { ReactNode } from "react"
+import iconArrow from '../assets/plan/desktop/icon-arrow.svg'
 
 interface Props {
     active?: boolean
@@ -6,6 +7,7 @@ interface Props {
     panelId: string
     buttonId: string
     onToggle: () => void
+    children?: ReactNode
 }
 
 export default function QuestionToggle({
@@ -13,9 +15,11 @@ export default function QuestionToggle({
     title,
     panelId,
     buttonId,
-    onToggle
+    onToggle,
+    children
 }: Props) {
     return (
+        <section className={`question-toggle ${active ? 'active' : ''}`}>
             <button
                 id={buttonId}
                 className={`question-toggle-button ${active ? 'active' : ''}`}
@@ -25,9 +29,17 @@ export default function QuestionToggle({
                 onClick={onToggle}
             >
                 <span>{title}</span>
-               
-               
-                
+                <span><img src={iconArrow} alt="Arrow icon"/></span>
             </button>
+            <div
+                id={panelId}
+                role="region"
+                aria-labelledby={buttonId}
+                hidden={!active}
+                className="question-toggle-panel"
+            >
+                {children}
+            </div>
+        </section>
     )
 }

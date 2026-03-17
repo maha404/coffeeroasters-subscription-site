@@ -789,3 +789,17 @@ header {
     color: var(--neutral-900);
     font-weight: bold;
 }
+
+
+.question-card {
+    padding: 20px;
+    border-radius: 8px;
+    gap: 16px;
+    background-color: var(--neutral-100);
+}
+
+.question-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
