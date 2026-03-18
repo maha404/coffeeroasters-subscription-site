@@ -1,30 +1,33 @@
 interface Props {
-    active?: boolean
     text: string
     option: string
-    panelId: string
-    labelledBy: string
-    onClick?: () => void
+    inputId: string
+    name: string
+    checked?: boolean
+    onChange: () => void
 }
 
 export default function QuestionCard({
-    active = false,
     text,
     option,
-    panelId,
-    labelledBy, 
-    onClick
+    inputId,
+    name,
+    checked = false,
+    onChange
 }: Props) {
     return (
-        <div
-            id={panelId}
-            role="region"
-            aria-labelledby={labelledBy}
-            className={`question-card ${active ? 'active' : ''}`}
-            onClick={onClick}
-        >
+        <label className={`question-card ${checked ? 'active' : ''}`} htmlFor={inputId}>
+            <input
+                id={inputId}
+                className="question-card-input"
+                type="radio"
+                name={name}
+                value={option}
+                checked={checked}
+                onChange={onChange}
+            />
             <h3>{option}</h3>
             <p>{text}</p>
-        </div>
+        </label>
     )
 }

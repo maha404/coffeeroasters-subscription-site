@@ -1,0 +1,112 @@
+[
+  {
+    "id": "drink-preference",
+    "title": "How do you drink your coffee?",
+    "name": "drink-preference",
+    "options": [
+      {
+        "value": "Capsule",
+        "label": "Capsule",
+        "description": "Compatible with Nespresso systems and similar brewers"
+      },
+      {
+        "value": "Filter",
+        "label": "Filter",
+        "description": "For pour over or drip methods like Aeropress, Chemex, and V60"
+      },
+      {
+        "value": "Espresso",
+        "label": "Espresso",
+        "description": "Dense and finely ground beans for an intense, flavorful experience"
+      }
+    ]
+  },
+  {
+    "id": "coffee-type",
+    "title": "What type of coffee?",
+    "name": "coffee-type",
+    "options": [
+      {
+        "value": "Single Origin",
+        "label": "Single Origin",
+        "description": "Distinct, high quality coffee from a specific family-owned farm"
+      },
+      {
+        "value": "Decaf",
+        "label": "Decaf",
+        "description": "Just like regular coffee, except the caffeine has been removed"
+      },
+      {
+        "value": "Blended",
+        "label": "Blended",
+        "description": "Combination of two or three dark roasted beans of organic coffees"
+      }
+    ]
+  },
+  {
+    "id": "quantity",
+    "title": "How much would you like?",
+    "name": "quantity",
+    "options": [
+      {
+        "value": "250g",
+        "label": "250g",
+        "description": "Perfect for the solo drinker. Yields about 12 delicious cups."
+      },
+      {
+        "value": "500g",
+        "label": "500g",
+        "description": "Perfect option for a couple. Yields about 40 delectable cups."
+      },
+      {
+        "value": "1000g",
+        "label": "1000g",
+        "description": "Perfect for offices and events. Yields about 90 delightful cups."
+      }
+    ]
+  },
+  {
+    "id": "grind-option",
+    "title": "Want us to grind them?",
+    "name": "grind-option",
+    "options": [
+      {
+        "value": "Wholebean",
+        "label": "Wholebean",
+        "description": "Best choice if you cherish the full sensory experience"
+      },
+      {
+        "value": "Filter",
+        "label": "Filter",
+        "description": "For drip or pour-over coffee methods such as V60 or Aeropress"
+      },
+      {
+        "value": "Cafetiere",
+        "label": "Cafetiere",
+        "description": "Course ground beans specially suited for french press coffee"
+      }
+    ]
+  },
+  {
+    "id": "deliveries",
+    "title": "How often should we deliver?",
+    "name": "deliveries",
+    "options": [
+      {
+        "value": "Every week",
+        "label": "Every week",
+        "description": "$7.20 per shipment. Includes free first-class shipping."
+      },
+      {
+        "value": "Every 2 weeks",
+        "label": "Every 2 weeks",
+        "description": "$9.60 per shipment. Includes free priority shipping."
+      },
+      {
+        "value": "Every month",
+        "label": "Every month",
+        "description": "$12.00 per shipment. Includes free priority shipping."
+      }
+    ]
+  }
+]

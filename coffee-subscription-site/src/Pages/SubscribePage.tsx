@@ -7,17 +7,38 @@ import HowItWorksSection from "../Components/HowItWorksSection/HowItWorksSection
 import PreferencesList from '../Components/PreferencesList'
 import QuestionCard from "../Components/QuestionCard"
 import QuestionToggle from "../Components/QuestionToggle"
+import questionsData from '../data/subscriptionQuestions.json'
+
+interface QuestionOption {
+    value: string
+    label: string
+    description: string
+}
+
+interface SubscriptionQuestion {
+    id: string
+    title: string
+    name: string
+    options: QuestionOption[]
+}
+
+type SelectedAnswers = Record<string, string>
+
+const subscriptionQuestions = questionsData as SubscriptionQuestion[]
 
 export default function SubscribePage() {
-    const [isQuestionOpen, setIsQuestionOpen] = useState(false)
+    const [openQuestionId, setOpenQuestionId] = useState<string | null>(subscriptionQuestions[0]?.id ?? null)
+    const [selectedAnswers, setSelectedAnswers] = useState<SelectedAnswers>({})
 
-    const handleToggle = () => {
-        setIsQuestionOpen((previous) => !previous)
+    const handleToggle = (questionId: string) => {
+        setOpenQuestionId((previous) => previous === questionId ? null : questionId)
     }
 
-    const handleCardClick = () => {
-        // Change to active state of the card
-        console.log("Card clicked");
+    const handleCardSelect = (questionId: string, option: string) => {
+        setSelectedAnswers((previous) => ({
+            ...previous,
+            [questionId]: option
+        }))
     }
 
     return (
@@ -32,38 +53,35 @@ export default function SubscribePage() {
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
             <PreferencesList />
-            <QuestionToggle
-                title="How do you drink your coffee?"
-                panelId="question-1-panel"
-                buttonId="question-1-button"
-                active={isQuestionOpen}
-                onToggle={handleToggle}
-            >
-                <div className="question-card-list">
-                <QuestionCard
-                    active={isQuestionOpen}
-                    text="Compatible with Nespresso systems and similar brewers"
-                    option="Capsule"
-                    panelId="question-1-card"
-                    labelledBy="question-1-button"
-                    onClick={handleCardClick}
-                />
-                <QuestionCard
-                    active={isQuestionOpen}
-                    text="For pour over or drip methods like Aeropress, Chemex, and V60"
-                    option="Filter"
-                    panelId="question-1-card"
-                    labelledBy="question-1-button"
-                />
-                <QuestionCard
-                    active={isQuestionOpen}
-                    text="Dense and finely ground beans for an intense, flavorful experience"
-                    option="Espresso"
-                    panelId="question-1-card"
-                    labelledBy="question-1-button"
-                />
-                </div>
-            </QuestionToggle>
+            {subscriptionQuestions.map((question) => {
+                const panelId = `${question.id}-panel`
+                const buttonId = `${question.id}-button`
+
+                return (
+                    <QuestionToggle
+                        key={question.id}
+                        title={question.title}
+                        panelId={panelId}
+                        buttonId={buttonId}
+                        active={openQuestionId === question.id}
+                        onToggle={() => handleToggle(question.id)}
+                    >
+                        <div className="question-card-list" aria-labelledby={buttonId}>
+                            {question.options.map((option) => (
+                                <QuestionCard
+                                    key={option.value}
+                                    text={option.description}
+                                    option={option.label}
+                                    inputId={`${question.id}-${option.value.toLowerCase().replace(/\s+/g, '-')}`}
+                                    name={question.name}
+                                    checked={selectedAnswers[question.id] === option.value}
+                                    onChange={() => handleCardSelect(question.id, option.value)}
+                                />
+                            ))}
+                        </div>
+                    </QuestionToggle>
+                )
+            })}
         </div>
     )
 }

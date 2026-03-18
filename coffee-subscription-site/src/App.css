@@ -792,10 +792,33 @@ header {
 
 
 .question-card {
+    position: relative;
+    display: block;
     padding: 20px;
     border-radius: 8px;
     gap: 16px;
+    border: 1px solid transparent;
     background-color: var(--neutral-100);
+    cursor: pointer;
+}
+
+.question-card.active {
+    color: var(--neutral-0);
+    background-color: var(--teal-600);
+}
+
+.question-card-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.question-card:focus-within {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 4px;
 }
 
 .question-card-list {
