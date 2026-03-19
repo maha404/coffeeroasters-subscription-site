@@ -1,8 +1,8 @@
 [
   {
-    "id": "drink-preference",
+    "id": "drinking-preference",
     "title": "How do you drink your coffee?",
-    "name": "drink-preference",
+    "name": "drinking-preference",
     "options": [
       {
         "value": "Capsule",
@@ -88,9 +88,9 @@
     ]
   },
   {
-    "id": "deliveries",
+    "id": "delivery-frequency",
     "title": "How often should we deliver?",
-    "name": "deliveries",
+    "name": "delivery-frequency",
     "options": [
       {
         "value": "Every week",

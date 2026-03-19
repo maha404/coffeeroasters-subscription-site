@@ -8,6 +8,7 @@ import PreferencesList from '../Components/PreferencesList'
 import QuestionCard from "../Components/QuestionCard"
 import QuestionToggle from "../Components/QuestionToggle"
 import questionsData from '../data/subscriptionQuestions.json'
+import OrderSummarySection from "../Components/OrderSummarySection"
 
 interface QuestionOption {
     value: string
@@ -82,6 +83,13 @@ export default function SubscribePage() {
                     </QuestionToggle>
                 )
             })}
+            <OrderSummarySection
+                drinkingPreference={selectedAnswers['drinking-preference'] || '___'}
+                coofeeType={selectedAnswers['coffee-type'] || '___'}
+                grindOption={selectedAnswers['grind-option'] || '___'}
+                quantity={selectedAnswers['quantity'] || '___'}
+                deliveryFrequency={selectedAnswers['delivery-frequency'] || '___'}
+            />
         </div>
     )
 }

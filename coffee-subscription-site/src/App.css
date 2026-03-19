@@ -826,3 +826,33 @@ header {
     flex-direction: column;
     gap: 16px;
 }
+
+.order-summary-section {
+    background-color: var(--neutral-900);
+    color: var(--neutral-0);
+    padding: 48px 24px;
+    border-radius: 8px;
+    font-size: bold;
+
+    h2 {
+        font-size: 16px;;
+        margin: 0;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+}
+
+.highlight {
+    color: var(--teal-300);
+    font-weight: bold;
+}
+
+.order-summary-container {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 16px;
+}
