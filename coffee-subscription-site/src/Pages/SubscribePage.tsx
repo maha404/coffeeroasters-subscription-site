@@ -43,7 +43,7 @@ export default function SubscribePage() {
     }
 
     return (
-        <div>
+        <div className="page-container">
             <Header
                 title="Create a plan"
                 text="Coffee the you wanted it to be. For coffee deliverd tomorrow or next week. Forwhatever brew method you use. For choice, for convenience, for quality."

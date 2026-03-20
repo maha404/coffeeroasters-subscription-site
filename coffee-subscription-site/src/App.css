@@ -26,10 +26,17 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 40px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
 .button {
+    font-family: "Fraunces", serif;
     border: none;
     padding: 16px 32px;
     border-radius: 6px;
@@ -245,6 +252,7 @@ header {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Fraunces", serif;
 }
 
 .cta-button:hover {
@@ -572,6 +580,7 @@ header {
 
     button {
         width: 153px;
+        font-family: "Fraunces", serif;
     }
 
     p {
@@ -866,6 +875,7 @@ header {
 }
 
 .question-toggle-button {
+    font-family: "Fraunces", serif;
     background-color: transparent;
     border: none;
     color: var(--neutral-500);
