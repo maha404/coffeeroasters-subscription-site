@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import iconArrow from '../assets/plan/desktop/icon-arrow.svg'
+import iconArrowUp from '../assets/plan/desktop/icon-arrow-up.svg'
 
 interface Props {
     active?: boolean
@@ -29,7 +30,7 @@ export default function QuestionToggle({
                 onClick={onToggle}
             >
                 <span>{title}</span>
-                <span><img src={iconArrow} alt="Arrow icon"/></span>
+                <span> {active ? <img src={iconArrowUp} alt="Arrow icon"/> : <img src={iconArrow}/>}</span>
             </button>
             <div
                 id={panelId}

@@ -54,6 +54,7 @@ export default function SubscribePage() {
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
             <PreferencesList />
+            <div className="question-list">
             {subscriptionQuestions.map((question) => {
                 const panelId = `${question.id}-panel`
                 const buttonId = `${question.id}-button`
@@ -83,6 +84,7 @@ export default function SubscribePage() {
                     </QuestionToggle>
                 )
             })}
+            </div>
             <OrderSummarySection
                 drinkingPreference={selectedAnswers['drinking-preference'] || '___'}
                 coofeeType={selectedAnswers['coffee-type'] || '___'}
