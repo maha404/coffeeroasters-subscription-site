@@ -493,9 +493,20 @@ header {
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        justify-content: start;
+        justify-content: center;
         width: 100%;
+        padding: 64px 2px;
     }
+
+    @media screen and (min-width: 1024px) {
+        justify-content: start;
+        gap: 95px;
+        width: 87%;
+        padding: 96px 80px;
+    }
+
+
+
 }
 
 .step-card {
@@ -525,7 +536,8 @@ header {
     }
 
     @media screen and (min-width: 768px) {
-
+        width: 192px;
+        gap: 32px;
         text-align: left;
         align-items: start;
 
@@ -533,6 +545,14 @@ header {
             padding: 0px 0px;
         }
 
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 285px;
+
+        h2 {
+            padding-right: 32px;
+        }
     }
 
 
@@ -801,6 +821,15 @@ header {
     font-weight: bold;
 }
 
+.preferences-section {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        width: 730px;
+        gap: 80px;
+    }
+}
+
 
 .question-card {
     position: relative;
@@ -836,6 +865,20 @@ header {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+    }
+
+     @media screen and (min-width: 1024px) {
+         justify-content: start;
+         width: 100%;
+         gap: 32px;
+     }
+
+
 }
 
 .order-summary-section {
@@ -852,6 +895,10 @@ header {
 
     p{
         font-size: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 48px 81px;
     }
 
 }
@@ -886,10 +933,32 @@ header {
     text-align: left;
     justify-content: space-between;
     gap: 32px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 32px;
+        }
+    
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
+        }
+
+
 }
 
 .question-list {
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+
+.subscription-section {
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 128px;
+    }
+
 }

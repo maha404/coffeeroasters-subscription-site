@@ -53,45 +53,48 @@ export default function SubscribePage() {
                 imageMobile={mobileHero}
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
-            <PreferencesList />
-            <div className="question-list">
-            {subscriptionQuestions.map((question) => {
-                const panelId = `${question.id}-panel`
-                const buttonId = `${question.id}-button`
+            <section className="subscription-section">
+                <PreferencesList />
+                <div className="preferences-section">
+                {subscriptionQuestions.map((question) => {
+                    const panelId = `${question.id}-panel`
+                    const buttonId = `${question.id}-button`
 
-                return (
-                    <QuestionToggle
-                        key={question.id}
-                        title={question.title}
-                        panelId={panelId}
-                        buttonId={buttonId}
-                        active={openQuestionId === question.id}
-                        onToggle={() => handleToggle(question.id)}
-                    >
-                        <div className="question-card-list" aria-labelledby={buttonId}>
-                            {question.options.map((option) => (
-                                <QuestionCard
-                                    key={option.value}
-                                    text={option.description}
-                                    option={option.label}
-                                    inputId={`${question.id}-${option.value.toLowerCase().replace(/\s+/g, '-')}`}
-                                    name={question.name}
-                                    checked={selectedAnswers[question.id] === option.value}
-                                    onChange={() => handleCardSelect(question.id, option.value)}
-                                />
-                            ))}
-                        </div>
-                    </QuestionToggle>
-                )
-            })}
-            </div>
-            <OrderSummarySection
-                drinkingPreference={selectedAnswers['drinking-preference'] || '___'}
-                coofeeType={selectedAnswers['coffee-type'] || '___'}
-                grindOption={selectedAnswers['grind-option'] || '___'}
-                quantity={selectedAnswers['quantity'] || '___'}
-                deliveryFrequency={selectedAnswers['delivery-frequency'] || '___'}
-            />
+                    return (
+                        <QuestionToggle
+                            key={question.id}
+                            title={question.title}
+                            panelId={panelId}
+                            buttonId={buttonId}
+                            active={openQuestionId === question.id}
+                            onToggle={() => handleToggle(question.id)}
+                        >
+                            <div className="question-card-list" aria-labelledby={buttonId}>
+                                {question.options.map((option) => (
+                                    <QuestionCard
+                                        key={option.value}
+                                        text={option.description}
+                                        option={option.label}
+                                        inputId={`${question.id}-${option.value.toLowerCase().replace(/\s+/g, '-')}`}
+                                        name={question.name}
+                                        checked={selectedAnswers[question.id] === option.value}
+                                        onChange={() => handleCardSelect(question.id, option.value)}
+                                    />
+                                ))}
+                            </div>
+                        </QuestionToggle>
+                    )
+                })}
+                <OrderSummarySection
+                    drinkingPreference={selectedAnswers['drinking-preference'] || '___'}
+                    coofeeType={selectedAnswers['coffee-type'] || '___'}
+                    grindOption={selectedAnswers['grind-option'] || '___'}
+                    quantity={selectedAnswers['quantity'] || '___'}
+                    deliveryFrequency={selectedAnswers['delivery-frequency'] || '___'}
+                />
+                </div>
+                
+            </section>
         </div>
     )
 }
