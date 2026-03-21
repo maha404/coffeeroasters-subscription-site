@@ -108,7 +108,7 @@ body {
     display: none;
 }
 
-a:link {
+a:link, a:visited {
     text-decoration: none;
     color: var(--neutral-900);
 }
@@ -119,6 +119,7 @@ a:link {
     gap: 33px;
     list-style: none;
     font-size: 12px;
+    font-family: "Barlow", sans-serif;
     padding: 0;
 }
 
@@ -153,6 +154,7 @@ footer {
     gap: 20px;
     list-style: none;
     font-size: 12px;
+    font-family: "Barlow", sans-serif;
     padding: 0;
     color: var(--neutral-500);
 }

@@ -8,7 +8,7 @@ export default function Navigation() {
                 <img src={logo} alt="Logo" className="logo" />
             </div>
             <ul className="menu-items">
-                <li><Link to="/">Homepage</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/subscribe">Create your plan</Link></li>
             </ul>
