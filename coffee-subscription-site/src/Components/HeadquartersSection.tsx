@@ -7,7 +7,7 @@ export default function HeadquartersSection() {
     return (
         <section className="headquarters-container">
            
-                <div>
+                <div className='headquarters-title'>
                     <h2>Our headquarters</h2>
                 </div>
                 <div className='headquarters-cards'>
