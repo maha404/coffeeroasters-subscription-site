@@ -5,9 +5,11 @@ import HeadquartersSectionCard from './HeadquaterSectionCard';
 
 export default function HeadquartersSection() {
     return (
-        <section className="headquarters-section">
-            <div className='headquarters-text'>
-                <h2>Our headquarters</h2>
+        <section className="headquarters-container">
+           
+                <div>
+                    <h2>Our headquarters</h2>
+                </div>
                 <div className='headquarters-cards'>
                     <HeadquartersSectionCard
                     imageSrc={UkIcon}
@@ -37,7 +39,7 @@ export default function HeadquartersSection() {
                     phone="+61 4 9928 3629"
                     />
                 </div>
-            </div>
+            
         </section>
     )
 }

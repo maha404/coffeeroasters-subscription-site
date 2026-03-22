@@ -791,7 +791,7 @@ header {
 .headquarters-section {
    
     @media screen and (min-width: 1024px) {
-        width: 1045px;
+        width: 85%;
         margin: 0 auto;
     }
 }
@@ -813,9 +813,21 @@ header {
         gap: 96px;
         width: 80%;
         margin: 0 auto;
+        text-align: left;
     }
 
 
+}
+
+.headquarters-container{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    
+    @media screen and (min-width: 1024px) {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /* Create plan */
