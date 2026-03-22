@@ -1,5 +1,4 @@
 import Button from "./Button";
-import { useState } from "react";
 
 interface props {
     open: boolean
@@ -8,18 +7,10 @@ interface props {
     grindOption: string
     quantity: string
     deliveryFrequency: string
+    onClose?: () => void
 }
 
 export default function Modal(props : props) {
-
-    const [isVisible, setIsVisible] = useState(props.open)
-
-    const closeModal = () => {
-        console.log(isVisible);
-        setIsVisible(false);
-    }
-
-
     return (
         <>
             {props.open && <div className="modal-backdrop"></div>}
@@ -29,7 +20,7 @@ export default function Modal(props : props) {
                 <p className="modal-text">Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout. </p>
                 <div className="modal-footer">
                     <p>$14.00/ mo</p>
-                    <Button text="Checkout" onClick={closeModal}/>
+                    <Button text="Checkout" onClick={props.onClose}/>
                 </div>
             </div>
         </>

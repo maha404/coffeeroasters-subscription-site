@@ -58,7 +58,7 @@ export default function SubscribePage() {
 
     return (
         <div className="page-container">
-            <Modal open={isModalOpen} drinkingPreference={selectedAnswers.drinkingPreference} coofeeType={selectedAnswers.coffeeType} quantity={selectedAnswers.quantity} grindOption={selectedAnswers.grindOpstion} deliveryFrequency={selectedAnswers.deliveryFrequency}/>
+            <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} drinkingPreference={selectedAnswers.drinkingPreference} coofeeType={selectedAnswers.coffeeType} quantity={selectedAnswers.quantity} grindOption={selectedAnswers.grindOpstion} deliveryFrequency={selectedAnswers.deliveryFrequency}/>
             <Header
                 title="Create a plan"
                 text="Coffee the you wanted it to be. For coffee deliverd tomorrow or next week. Forwhatever brew method you use. For choice, for convenience, for quality."
