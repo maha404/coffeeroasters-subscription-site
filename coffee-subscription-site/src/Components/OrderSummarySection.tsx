@@ -6,6 +6,8 @@ interface props {
     grindOption: string
     quantity: string
     deliveryFrequency: string
+    selectedAnswers?: number 
+    onClick?: () => void
 }
 
 
@@ -16,7 +18,7 @@ export default function OrderSummarySection(props: props) {
                 <h2>Order Summary</h2>
                 <p>“I drink my coffee using <span className="highlight">{props.drinkingPreference}</span>, with a <span className="highlight">{props.coofeeType}</span> type of bean. <span className="highlight">{props.quantity}</span>, sent to me <span className="highlight">{props.deliveryFrequency}</span>.”</p>
             </div>
-            <Button text="Create your plan" />
+            <Button text="Create your plan" disabled={props.selectedAnswers === 5 ? false : true} onClick={props.onClick}/>
         </div>
     )
 }

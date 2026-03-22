@@ -9,6 +9,7 @@ import QuestionCard from "../Components/QuestionCard"
 import QuestionToggle from "../Components/QuestionToggle"
 import questionsData from '../data/subscriptionQuestions.json'
 import OrderSummarySection from "../Components/OrderSummarySection"
+import Modal from "../Components/Modal"
 
 interface QuestionOption {
     value: string
@@ -30,6 +31,15 @@ const subscriptionQuestions = questionsData as SubscriptionQuestion[]
 export default function SubscribePage() {
     const [openQuestionId, setOpenQuestionId] = useState<string | null>(subscriptionQuestions[0]?.id ?? null)
     const [selectedAnswers, setSelectedAnswers] = useState<SelectedAnswers>({})
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const preferenceProgress = {
+        preferencesActive: Boolean(selectedAnswers['drinkingPreference']),
+        beanTypeActive: Boolean(selectedAnswers['coffeeType']),
+        quantityActive: Boolean(selectedAnswers['quantity']),
+        grindOptionActive: Boolean(selectedAnswers['grindOption']),
+        deliveryActive: Boolean(selectedAnswers['deliveryFrequency'])
+    }
 
     const handleToggle = (questionId: string) => {
         setOpenQuestionId((previous) => previous === questionId ? null : questionId)
@@ -42,8 +52,13 @@ export default function SubscribePage() {
         }))
     }
 
+    const openModal = () => {
+        setIsModalOpen(true);
+    }
+
     return (
         <div className="page-container">
+            <Modal open={isModalOpen} drinkingPreference={selectedAnswers.drinkingPreference} coofeeType={selectedAnswers.coffeeType} quantity={selectedAnswers.quantity} grindOption={selectedAnswers.grindOpstion} deliveryFrequency={selectedAnswers.deliveryFrequency}/>
             <Header
                 title="Create a plan"
                 text="Coffee the you wanted it to be. For coffee deliverd tomorrow or next week. Forwhatever brew method you use. For choice, for convenience, for quality."
@@ -54,7 +69,7 @@ export default function SubscribePage() {
             />
             <HowItWorksSection  howItWorksStyling="backgroundColor"/>
             <section className="subscription-section">
-                <PreferencesList />
+                <PreferencesList {...preferenceProgress} />
                 <div className="preferences-section">
                 {subscriptionQuestions.map((question) => {
                     const panelId = `${question.id}-panel`
@@ -86,11 +101,13 @@ export default function SubscribePage() {
                     )
                 })}
                 <OrderSummarySection
-                    drinkingPreference={selectedAnswers['drinking-preference'] || '___'}
-                    coofeeType={selectedAnswers['coffee-type'] || '___'}
-                    grindOption={selectedAnswers['grind-option'] || '___'}
+                    drinkingPreference={selectedAnswers['drinkingPreference'] || '___'}
+                    coofeeType={selectedAnswers['coffeeType'] || '___'}
+                    grindOption={selectedAnswers['grindOption'] || '___'}
                     quantity={selectedAnswers['quantity'] || '___'}
-                    deliveryFrequency={selectedAnswers['delivery-frequency'] || '___'}
+                    deliveryFrequency={selectedAnswers['deliveryFrequency'] || '___'}
+                    selectedAnswers={Object.keys(selectedAnswers).length}
+                    onClick={openModal}
                 />
                 </div>
                 

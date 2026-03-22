@@ -1,8 +1,8 @@
 [
   {
-    "id": "drinking-preference",
+    "id": "drinkingPreference",
     "title": "How do you drink your coffee?",
-    "name": "drinking-preference",
+    "name": "drinkingPreference",
     "options": [
       {
         "value": "Capsule",
@@ -22,9 +22,9 @@
     ]
   },
   {
-    "id": "coffee-type",
+    "id": "coffeeType",
     "title": "What type of coffee?",
-    "name": "coffee-type",
+    "name": "coffeeType",
     "options": [
       {
         "value": "Single Origin",
@@ -66,9 +66,9 @@
     ]
   },
   {
-    "id": "grind-option",
+    "id": "grindOption",
     "title": "Want us to grind them?",
-    "name": "grind-option",
+    "name": "grindOption",
     "options": [
       {
         "value": "Wholebean",
@@ -88,9 +88,9 @@
     ]
   },
   {
-    "id": "delivery-frequency",
+    "id": "deliveryFrequency",
     "title": "How often should we deliver?",
-    "name": "delivery-frequency",
+    "name": "deliveryFequency",
     "options": [
       {
         "value": "Every week",

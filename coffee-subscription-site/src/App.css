@@ -561,16 +561,34 @@ header {
 }
 
 /* Modal */
-.modal {
+.modal-open{
     display: flex;
+    position: absolute;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     gap: 3px;
-    padding: 48px;
+    padding: 0 48px 48px 48px;
     background-color: var(--neutral-50);
     border-radius: 8px;
     width: 540px;
     border-radius: 0 0 4px 4px;
+    top: 200%;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 62, 76, 0.7);
+    z-index: 1;
 }
 
 .modal-header {
@@ -906,7 +924,7 @@ header {
 }
 
 .highlight {
-    color: var(--teal-300);
+    color: var(--teal-600);
     font-weight: bold;
 }
 
