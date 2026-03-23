@@ -335,6 +335,7 @@ header {
     }
 
     p {
+        font-family: "Barlow", sans-serif;
         font-size: 16px;
         color: var(--neutral-500);
     }
@@ -400,6 +401,7 @@ header {
     border-radius: 8px;
     text-align: center;
     color: var(--neutral-0);
+    font-family: "Barlow", sans-serif;
 
     h3 {
         font-size: 30px;
@@ -450,6 +452,11 @@ header {
         font-size: 24px;
         font-weight: bold;
         margin: 0;
+    }
+
+    p {
+        font-size: 16px;
+        font-family: "Barlow", sans-serif;
     }
 
     @media screen and (min-width: 768px) {
@@ -541,6 +548,7 @@ header {
     }
 
     p {
+        font-family: "Barlow", sans-serif;
         font-size: 16px;
     }
 
@@ -679,6 +687,7 @@ header {
     }
 
     p {
+        font-family: "Barlow", sans-serif;
         font-size: 16px;
         line-height: 1.5;
         color: var(--neutral-900);
@@ -777,6 +786,7 @@ header {
     }
 
     p {
+        font-family: "Barlow", sans-serif;
         margin: 24px 0 0;
         line-height: 1.625;
     }
@@ -832,11 +842,21 @@ header {
         margin: 0;
         color: var(--neutral-900);
     }
+
+    p {
+        font-family: "Barlow", sans-serif;
+    }
 }
 
 .headquarters-title {
+    text-align: center;
     font-size: 24px;
     color: var(--neutral-500);
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    
 }
 
 .headquarters-container{
@@ -874,9 +894,11 @@ header {
 }
 
 .preferences-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
     @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: column;
         width: 730px;
         gap: 80px;
     }
@@ -941,8 +963,12 @@ header {
     font-size: bold;
 
     h2 {
+        font-family: "Barlow", sans-serif;
+        text-transform: uppercase;
         font-size: 16px;;
         margin: 0;
+        color: var(--neutral-0);
+        font-weight: lighter;
     }
 
     p{
