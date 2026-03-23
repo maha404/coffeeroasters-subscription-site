@@ -914,6 +914,10 @@ header {
     border: 1px solid transparent;
     background-color: var(--neutral-100);
     cursor: pointer;
+
+    p {
+        font-family: "Barlow", sans-serif;
+    }
 }
 
 .question-card.active {
