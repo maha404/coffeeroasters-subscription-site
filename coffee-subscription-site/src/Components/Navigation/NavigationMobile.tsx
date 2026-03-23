@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/shared/desktop/logo.svg";
 import hamburgerIcon from "../../assets/shared/mobile/icon-hamburger.svg";
 import closeIcon from "../../assets/shared/mobile/icon-close.svg";
+import { Link } from "react-router";
 
 export default function NavigationMobile() {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +25,9 @@ export default function NavigationMobile() {
                 </button>
             </div>
             <ul className={isOpen ? "nav-menu nav-open" : "nav-menu nav-closed"}>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Create your plan</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/subscribe">Create your plan</Link></li>
             </ul>
         </nav>
     );
